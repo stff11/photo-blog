@@ -50,8 +50,10 @@ nav ul li a {
 }
 
 main {
-  /* padding: 2rem 2rem 7rem 2rem; */
+  padding: 4rem;
   text-align: center;
+  position: relative;
+  z-index: -1;
 }
 
 /* Full-page image with overlay content on top */
@@ -140,7 +142,6 @@ main {
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   justify-items: center;
-  padding: 4rem 20px;
 }
 
 /* Individual portfolio item */
