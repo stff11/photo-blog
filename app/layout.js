@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
     <html lang="en">  {/* Root HTML tag with language attribute */}
       <body>
         <Navigation />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>

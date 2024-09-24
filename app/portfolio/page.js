@@ -27,7 +27,11 @@ async function fetchImages() {
 const PortfolioPage = async () => {
   const images = await fetchImages();
 
-  return <PortfolioGrid images={images} />;
+  return (
+    <main>
+      <PortfolioGrid images={images} />
+    </main>
+  );
 };
 
 export default PortfolioPage;

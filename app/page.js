@@ -5,6 +5,7 @@ import Button from '../components/Button';
 
 const HomePage = () => {
   return (
+    <main className="no-padding">
     <div className="homepage">
       <Image 
         priority="true"
@@ -22,7 +23,8 @@ const HomePage = () => {
         </Link>
       </div>
     </div>
-  );
+    </main>
+  )
 };
 
 export default HomePage;

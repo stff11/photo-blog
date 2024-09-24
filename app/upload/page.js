@@ -98,6 +98,7 @@ const UploadPage = () => {
   };
 
   return (
+    <main>
     <div>
       <h1>Upload a New Photo</h1>
       <form onSubmit={handleSubmit}>
@@ -107,6 +108,7 @@ const UploadPage = () => {
 
       <ToastContainer /> {/* Toastify container */}
     </div>
+    </main>
   );
 };
 
