@@ -49,13 +49,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
-  padding: 4rem;
-  text-align: center;
-  position: relative;
-  z-index: -1;
-}
-
 /* Full-page image with overlay content on top */
 .homepage {
   position: relative;
@@ -76,6 +69,7 @@ main {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
+  z-index: 10;
 }
 
 .overlay {
@@ -110,6 +104,8 @@ main {
   text-decoration:none;
   text-shadow:0px 1px 0px var(--button-hover-color);
   margin: 20px;
+  position: relative;
+  z-index: 10;
 }
 .btn:hover {
   background:linear-gradient(to bottom, var(--button-hover-color) 5%, var(--button-color) 100%);
@@ -142,6 +138,9 @@ main {
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   justify-items: center;
+  padding: 4rem 0.5rem;
+  position: relative;
+  z-index: -1;
 }
 
 /* Individual portfolio item */
