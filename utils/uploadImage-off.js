@@ -1,5 +1,5 @@
 import { uploadImage } from './cloudinary';
-import Image from '../models/Image';
+import Image from '../models/Image-off';
 import dbConnect from './mongodb';
 import exifr from 'exifr';
 

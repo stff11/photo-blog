@@ -62,8 +62,8 @@ main {
 /* Full-page image with overlay content on top */
 .homepage {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  height: 99vh;
+  width: 99vw;
   overflow: hidden;
 }
 
@@ -156,7 +156,7 @@ main {
 .portfolio-item {
   position: relative;
   width: 100%;
-  padding-bottom: 66.66%; /* Aspect ratio 3:2 */
+  padding-bottom: 100%; /* Aspect ratio square */
   overflow: hidden;
 }
 
@@ -175,8 +175,8 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 99vw;
+  height: 99vh;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
@@ -187,8 +187,8 @@ main {
 
 .modal-content {
   position: relative;
-  width: 90vw;
-  height: 90vh;
+  width: 95vw;
+  height: 99vh;
   max-width: 2000px; /* Optional: Set a maximum width */
   max-height: 1000px; /* Optional: Set a maximum height */
   display: flex;
@@ -197,8 +197,8 @@ main {
 }
 
 .full-size-image {
-  max-width: 90vw; /* Make sure the image doesn't overflow the modal horizontally */
-  max-height: 90vh; /* Keep the image within the visible viewport, allowing some room at the top/bottom */
+  max-width: 99vw; /* Make sure the image doesn't overflow the modal horizontally */
+  max-height: 98vh; /* Keep the image within the visible viewport, allowing some room at the top/bottom */
   object-fit: contain; /* Ensures the aspect ratio is maintained */
   margin: 0 auto; /* Center the image horizontally */
   display: block; /* Make sure the image behaves as a block element */
@@ -209,7 +209,7 @@ main {
   top: 10px;
   right: 20px;
   color: white;
-  font-size: 24px;
+  font-size: 25px;
   cursor: pointer;
 }
 
@@ -236,7 +236,7 @@ main {
   color: #ccc;
 }
 
-/* Responsive layout: 5 columns on large screens */
+/* Responsive layout: 4 columns on large screens */
 @media (min-width: 1200px) {
   .portfolio-grid {
     grid-template-columns: repeat(4, 1fr);

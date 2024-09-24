@@ -55,7 +55,6 @@ const PortfolioGrid = ({ images = [] }) => {
         <div className="modal">
           <span className="close" onClick={closeModal}>X</span>
           <div className="modal-content">
-
             {/* Conditionally hide "Previous" arrow if it's the first image */}
             <span
               className="prev"
@@ -64,15 +63,13 @@ const PortfolioGrid = ({ images = [] }) => {
             >
               &lt;
             </span>
-
             <Image
-              src={createCloudinaryUrl(images[selectedImageIndex].url, 1200, 800)}
+              src={createCloudinaryUrl(images[selectedImageIndex].url, 1600, 1000)}
               alt={`Full-size Image ${selectedImageIndex + 1}`}
-              width={1200}
-              height={800}
+              width={1600}
+              height={1000}
               className="full-size-image"
             />
-
             {/* Conditionally hide "Next" arrow if it's the last image */}
             <span
               className="next"
@@ -87,5 +84,4 @@ const PortfolioGrid = ({ images = [] }) => {
     </div>
   );
 };
-
 export default PortfolioGrid;

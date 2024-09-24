@@ -1,7 +1,5 @@
 // /app/portfolio/page.js
-
 import { MongoClient } from 'mongodb';
-// import Image from 'next/image';
 import PortfolioGrid from "../../components/PortfolioGrid";
 
 // Fetch images from MongoDB
@@ -16,8 +14,8 @@ async function fetchImages() {
       id: img._id.toString(), // Convert ObjectID to string
       url: img.url,
       public_id: img.public_id,
-      timestamp: img.timestamp,
-      location: img.location, // If needed
+      // timestamp: img.timestamp,
+      // location: img.location, 
   }));
   
   client.close();

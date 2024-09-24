@@ -14,7 +14,6 @@ const HomePage = () => {
         fill="true"
         className="background-image"
       />
-      
       {/* Title and button overlaid on the image */}
       <div className="overlay-content">
         <h1 className="title">My Photo Album</h1>
