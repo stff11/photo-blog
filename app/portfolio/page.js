@@ -1,25 +1,18 @@
 // /app/portfolio/page.js
-import { MongoClient } from 'mongodb';
-import PortfolioGrid from "../../components/PortfolioGrid";
+import clientPromise from '../../utils/mongodb';
+import PortfolioGrid from '../../components/PortfolioGrid';
 
-// Fetch images from MongoDB
 async function fetchImages() {
-  const client = await MongoClient.connect(process.env.MONGODB_URI);
+  const client = await clientPromise;
   const db = client.db('my-photos');
   const imagesCollection = db.collection('photos');
-  const images = await imagesCollection.find({}).toArray();
+  const images = await imagesCollection.find({}).sort({ timestamp: -1 }).toArray();
 
-  // Convert MongoDB-specific objects to plain objects
-  const plainImages = images.map(img => ({
-      id: img._id.toString(), // Convert ObjectID to string
-      url: img.url,
-      public_id: img.public_id,
-      // timestamp: img.timestamp,
-      // location: img.location, 
+  return images.map((img) => ({
+    id: img._id.toString(),
+    url: img.url,
+    public_id: img.public_id,
   }));
-  
-  client.close();
-  return plainImages;
 }
 
 const PortfolioPage = async () => {
@@ -27,6 +20,15 @@ const PortfolioPage = async () => {
 
   return (
     <main>
+      <div style={{ padding: '2rem 0 1rem', textAlign: 'center' }}>
+        <h1 style={{
+          fontFamily: "'Playfair Display', serif",
+          fontSize: '2rem',
+          fontWeight: 400,
+          color: 'var(--foreground)',
+          letterSpacing: '0.02em',
+        }}>Portfolio</h1>
+      </div>
       <PortfolioGrid images={images} />
     </main>
   );
